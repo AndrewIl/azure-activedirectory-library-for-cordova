@@ -42,7 +42,7 @@ Once you’ve updated plugin to the latest version your application will continu
 
     ```
     cordova plugin rm cordova-plugin-ms-adal-is-back-12 --save
-    cordova plugin add cordova-plugin-ms-adal-is-back-12@0.10.12 --save
+    cordova plugin add cordova-plugin-ms-adal-is-back-12@0.10.14 --save
     ```
 
 ## Community Help and Support
