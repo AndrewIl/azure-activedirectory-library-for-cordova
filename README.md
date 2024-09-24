@@ -1,6 +1,6 @@
 # This plugin is brought back to life and can be updated here
 
-## New plugin name: cordova-plugin-ms-adal-is-back
+## New plugin name: cordova-plugin-ms-adal-is-back-12
 
 ## Fixes:
 
@@ -12,7 +12,7 @@
 // Remove the old plugin
 cordova plugin rm cordova-plugin-ms-adal
 // Install the new
-cordova plugin add cordova-plugin-ms-adal-is-back
+cordova plugin add cordova-plugin-ms-adal-is-back-12
 ```
 
 # ========================
@@ -41,8 +41,8 @@ Once you’ve updated plugin to the latest version your application will continu
 - run the following commands:
 
     ```
-    cordova plugin rm cordova-plugin-ms-adal-is-back --save
-    cordova plugin add cordova-plugin-ms-adal-is-back@0.10.x --save
+    cordova plugin rm cordova-plugin-ms-adal-is-back-12 --save
+    cordova plugin add cordova-plugin-ms-adal-is-back-12@0.10.12 --save
     ```
 
 ## Community Help and Support
