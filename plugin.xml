@@ -9,8 +9,8 @@
 
     <license>Apache 2.0</license>
     <keywords>microsoft, azure, adal, activedirectory</keywords>
-    <repo>https://github.com/Perroquiet/azure-activedirectory-library-for-cordova</repo>
-    <issue>https://github.com/Perroquiet/azure-activedirectory-library-for-cordova/issues</issue>
+    <repo>https://github.com/AndrewIl/azure-activedirectory-library-for-cordova</repo>
+    <issue>https://github.com/AndrewIl/azure-activedirectory-library-for-cordova/issues</issue>
 
     <engines>
         <!-- Required gradle functionality support -->
