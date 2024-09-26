@@ -11,7 +11,7 @@ module.exports = function (ctx) {
     // Read config.xml -> extract adal-use-corporate-network variable value; default it to false
     var useCorporateNetwork = false;
     var configXml = shell.ls(path.join(ctx.opts.projectRoot, 'platforms/windows/config.xml'))[0];
-    var pluginXml = shell.ls(path.join(ctx.opts.projectRoot, 'plugins/cordova-plugin-ms-adal-is-back/plugin.xml'))[0];
+    var pluginXml = shell.ls(path.join(ctx.opts.projectRoot, 'plugins/cordova-plugin-ms-adal-is-back-12/plugin.xml'))[0];
 
     var rePreferenceValue = /<preference\s+name="adal-use-corporate-network"\s+value="(.+)"\s*\/>/i;
     var preferenceValue = shell.grep(rePreferenceValue, configXml);
@@ -26,7 +26,7 @@ module.exports = function (ctx) {
     var ssoPluginInstallPath = path.join(ctx.opts.projectRoot, 'plugins', helperPluginId);
     var ssoPluginDepEnabled = fs.existsSync(ssoPluginInstallPath);
 
-    var ssoPluginPath = path.join(ctx.opts.projectRoot, 'plugins/cordova-plugin-ms-adal-is-back/src/windows/sso');
+    var ssoPluginPath = path.join(ctx.opts.projectRoot, 'plugins/cordova-plugin-ms-adal-is-back-12/src/windows/sso');
 
     var plugmanInstallOpts = {
         plugins_dir: path.join(ctx.opts.projectRoot, 'plugins'),
@@ -45,7 +45,7 @@ module.exports = function (ctx) {
             // Enabling dependency
             var plugman = require('../plugman/plugman');
 
-            plugman.install(plugmanInstallOpts.platform, plugmanInstallOpts.project, 
+            plugman.install(plugmanInstallOpts.platform, plugmanInstallOpts.project,
                 ssoPluginPath, plugmanInstallOpts.plugins_dir);
         }
     } else {
@@ -59,7 +59,7 @@ module.exports = function (ctx) {
             // Removing dependency
             var plugman = require('../plugman/plugman');
 
-            plugman.uninstall(plugmanInstallOpts.platform, plugmanInstallOpts.project, 
+            plugman.uninstall(plugmanInstallOpts.platform, plugmanInstallOpts.project,
                 helperPluginId, plugmanInstallOpts.plugins_dir);
         }
     }

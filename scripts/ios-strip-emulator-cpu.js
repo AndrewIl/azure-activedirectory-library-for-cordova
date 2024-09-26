@@ -11,7 +11,7 @@ module.exports = function (context) {
     const matchingProjectFiles = dirContent.filter(filePath => /.*\.xcodeproj/gi.test(filePath));
     const projectPath = projectDir + '/' + matchingProjectFiles[0] + '/project.pbxproj'
 
-    const shellscriptPath = path.join(context.opts.projectRoot, '/plugins/cordova-plugin-ms-adal-is-back/scripts/ios-strip-emu.txt');
+    const shellscriptPath = path.join(context.opts.projectRoot, '/plugins/cordova-plugin-ms-adal-is-back-12/scripts/ios-strip-emu.txt');
     const shellscript = fs.readFileSync(shellscriptPath, "utf-8");
     const project = xcode.project(projectPath)
 
@@ -28,7 +28,7 @@ module.exports = function (context) {
             'Run script',
             project.getFirstTarget().uuid,
             options);
-        
+
         fs.writeFileSync(projectPath, project.writeSync());
     })
 }

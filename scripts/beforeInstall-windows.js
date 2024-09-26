@@ -25,11 +25,11 @@ module.exports = function (ctx) {
             project: path.join(ctx.opts.projectRoot, 'platforms', 'windows')
         };
 
-        var ssoPluginPath = path.join(ctx.opts.projectRoot, 'plugins/cordova-plugin-ms-adal-is-back/src/windows/sso');
+        var ssoPluginPath = path.join(ctx.opts.projectRoot, 'plugins/cordova-plugin-ms-adal-is-back-12/src/windows/sso');
 
         var plugman = require('../plugman/plugman');
 
-        plugman.install(plugmanInstallOpts.platform, plugmanInstallOpts.project, 
+        plugman.install(plugmanInstallOpts.platform, plugmanInstallOpts.project,
             ssoPluginPath, plugmanInstallOpts.plugins_dir);
     }
 };
